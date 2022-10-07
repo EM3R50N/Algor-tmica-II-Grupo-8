@@ -16,8 +16,11 @@ public class Cuenta {
     protected Vector<Viaje> viaje;
     public void registrarCuenta(){}
     public void iniciarSesion(){}
+    public void cerrarSesion(){}
+    public void mostrarDatos(){}
     public void actualizarDatos(){}
     public void registrarViajes(){}
     public void mostrarViajes(){}
+
 
 }
