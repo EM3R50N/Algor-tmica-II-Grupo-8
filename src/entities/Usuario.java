@@ -1,7 +1,8 @@
 package entities;
 
 public class Usuario extends Cuenta{
-    public solicitarViaje(){}
-    public cancelarViaje(){}
-    public pagarViaje(){}
+    public void solicitarViaje(){}
+    public void cancelarViaje(){}
+    public void pagarViaje(){}
+    public void consultarProgreso(){}
 }

@@ -5,4 +5,7 @@ public class Auto {
     private Chofer chofer;
     private int capacidad;
     private String marca;
+    public String getPlaca() {
+        return placa;
+    }
 }

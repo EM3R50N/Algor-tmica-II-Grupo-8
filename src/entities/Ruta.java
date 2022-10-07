@@ -5,7 +5,7 @@ public class Ruta {
     private String lugarInicio[][];
     private String lugarFin[][];
     private int duracion;
-    public String getID() {
-        return ID;
+    public String getID(){
+                return ID;
     }
 }

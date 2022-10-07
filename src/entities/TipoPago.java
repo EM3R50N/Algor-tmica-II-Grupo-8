@@ -1,9 +1,9 @@
 package entities;
 
 public class TipoPago {
-    private String ID;
+    private String tipo;
 
-    public String getID() {
-        return ID;
+    public String getTipo() {
+        return tipo;
     }
 }
