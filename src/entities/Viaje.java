@@ -2,7 +2,7 @@ package entities;
 
 public class Viaje {
     private String codViaje;
-    private Usuario usuario;
+    private Pasajero usuario;
     private Ruta ruta;
     private Double monto;
     private double progreso;

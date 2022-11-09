@@ -1,10 +1,9 @@
 package entities;
 
-public class Usuario extends Cuenta{
-
-    public Usuario(String nombre, String apellidoP, String apellidoM, String telefono, String DNI, char genero, String tipo){
-        super(nombre, apellidoP, apellidoM, telefono, DNI, genero, tipo);
-        tipo="Usuario";
+public class Pasajero extends Cuenta{
+    public Pasajero(String nombres, String apellidoPat, String apellidoMat, char genero, String telefono, String DNI ,String email, String contrasenia){
+        super(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
+        tipo ="Pasajero";
     }
     public void solicitarViaje(){}
     public void cancelarViaje(){}
