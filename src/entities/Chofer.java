@@ -4,8 +4,8 @@ public class Chofer extends Cuenta{
     private boolean licencia;
     private boolean soat;
 
-    public Chofer(String nombre, String apellidoP, String apellidoM, String telefono, String DNI, char genero, String tipo){
-        super(nombre, apellidoP, apellidoM, telefono, DNI, genero, tipo);
+    public Chofer(String nombres, String apellidoPat, String apellidoMat, char genero, String telefono, String DNI ,String email, String contrasenia){
+        super(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
         tipo ="Chofer";
     }
     public void confirmarViaje(){}
