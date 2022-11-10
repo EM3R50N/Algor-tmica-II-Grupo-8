@@ -1,14 +1,24 @@
 import entities.Chofer;
 import entities.Pasajero;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-public class AplicativoTaxi {
-    static ArrayList<Chofer> chof = new ArrayList<Chofer>();
-    static ArrayList<Pasajero> pasa = new ArrayList<Pasajero>();
-    static Scanner s = new Scanner(System.in);
 
+import persistencia.JSONConfig;
+import persistencia.Persitencia;
+import processes.registroConfig;
+
+public class AplicativoTaxi {
+    static Scanner s = new Scanner(System.in);
+    //static ArrayList<Chofer> chof = new ArrayList<Chofer>();
+    //static ArrayList<Pasajero> pasa = new ArrayList<Pasajero>();
+    static registroConfig config = new registroConfig();
+    static JSONConfig r = new JSONConfig();
     public static void main(String[] args) {
+
+
+        Persitencia persitencia = new JSONConfig();
+        persitencia.leerConfig(config);
+
         int option;
         System.out.println("Bienvenido seleccione el menu el cual ingresar");
         do{
@@ -57,10 +67,18 @@ public class AplicativoTaxi {
             String contrasenia = s.next();
             if (opc == 1) {
                 Pasajero p = new Pasajero(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
-                pasa.add(p);
+                if (config.crearPasajero(p) == 0){
+                    System.out.println("Cuenta Pasajero agregada");
+                } else {
+                    System.out.println("Cuenta Pasajero ya existe");
+                }
             } else if(opc ==2){
                 Chofer c = new Chofer(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
-                chof.add(c);
+                if (config.crearChofer(c) == 0){
+                    System.out.println("Cuenta Chofer agregada");
+                } else {
+                    System.out.println("Cuenta Chofer ya existe");
+                }
             }
         }
     }

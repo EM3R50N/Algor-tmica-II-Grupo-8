@@ -1,0 +1,26 @@
+{
+  "Chofer": [
+    { 
+      "nombres": "Emerson Raul",
+      "apellidoPat": "Huaman",
+      "apellidoMat": "Ortiz",
+      "genero": "M",
+      "telefono": "123456789",
+      "DNI": "12121212",
+      "email": "emerson.huaman@unmsm.edu.pe",
+      "contrasenia": "12121212",
+    }
+  ],
+  "Pasajero": [
+    {
+      "nombres": "Joaquin Enrique",
+      "apellidoPat": "Hidalgo",
+      "apellidoMat": "Cock",
+      "genero": "M",
+      "telefono": "234567891",
+      "DNI": "13131313",
+      "email": "joaquin.hidalgo@unmsm.edu.pe",
+      "contrasenia": "13131313",
+    }
+  ]
+}
