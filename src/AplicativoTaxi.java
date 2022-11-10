@@ -1,31 +1,36 @@
 import entities.Chofer;
 import entities.Pasajero;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 public class AplicativoTaxi {
+    static ArrayList<Chofer> chof = new ArrayList<Chofer>();
+    static ArrayList<Pasajero> pasa = new ArrayList<Pasajero>();
+    static Scanner s = new Scanner(System.in);
 
     public static void main(String[] args) {
         int option;
-        Scanner s = new Scanner(System.in);
         System.out.println("Bienvenido seleccione el menu el cual ingresar");
         do{
             imprimirMenuInicial();
             option= s.nextInt();
             switch(option){
-                case 1: registro(s); break;
-                case 2: IniciarSesion(s); break;
+                case 1: registro(); break;
+                case 2: IniciarSesion(); break;
                 case 3: salirApp(); break;
             }
         }
         while(option !=3);
     }
+
     public static void imprimirMenuInicial() {
         System.out.println("");
         System.out.println("Presione 1 para registarse");
         System.out.println("Presione 2 para iniciar sesion");
         System.out.println("Presione 3 para salir de la aplicacion");
     }
-    public static void registro(Scanner s) {
+
+    public static void registro() {
         System.out.println("Menu de registro proceda a llenar sus datos");
         System.out.println("Presione 1 para registarse como Pasajero");
         System.out.println("Presione 2 para registarse como Chofer");
@@ -52,12 +57,14 @@ public class AplicativoTaxi {
             String contrasenia = s.next();
             if (opc == 1) {
                 Pasajero p = new Pasajero(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
+                pasa.add(p);
             } else if(opc ==2){
                 Chofer c = new Chofer(nombres, apellidoPat, apellidoMat, genero, telefono, DNI, email, contrasenia);
+                chof.add(c);
             }
         }
     }
-    public static void IniciarSesion(Scanner s){
+    public static void IniciarSesion(){
 
     }
     public static void salirApp(){
