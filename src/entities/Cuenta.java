@@ -24,7 +24,17 @@ public class Cuenta {
         this.email = email;
         this.contrasenia = contrasenia;
     }
-
+    public String getNombres(){return this.nombres;};
+    public String getApellidoPat(){return this.apellidoPat;};
+    public String getApellidoMat(){return this.apellidoMat;};
+    public char getGenero(){return this.genero;};
+    public String getTelefono(){return this.telefono;};
+    public String getDNI(){return this.DNI;};
+    public String getEmail(){return this.email;};
+    public String getContrasenia(){return this.contrasenia;};
+    public String NombreCompleto() {
+        return nombres + " " + apellidoPat + " " + apellidoMat;
+    }
     public void registrarCuenta(){}
     public void iniciarSesion(){}
     public void cerrarSesion(){}
