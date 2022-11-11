@@ -1,8 +1,11 @@
 import entities.Chofer;
+import entities.Cuenta;
 import entities.Pasajero;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import persistencia.JSONConfig;
 import persistencia.Persitencia;
 import processes.registroConfig;
@@ -46,7 +49,7 @@ public class AplicativoTaxi {
         System.out.println("Presione 2 para registarse como Chofer");
         System.out.println("Presione 3 o otro numero para salir");
         int opc = s.nextInt();
-        while (opc != 3) {
+        if(opc ==1 || opc == 2) {
             System.out.println("");
             System.out.println("Llene sus datos basicos");
             System.out.println("Nombres");
@@ -83,7 +86,12 @@ public class AplicativoTaxi {
         }
     }
     public static void IniciarSesion(){
-
+        System.out.println("");
+        System.out.println("Ingrese su email");
+        String email = s.next();
+        System.out.println("Ingrese su contrasenia");
+        String contrasenia = s.next();
+        config.iniciarSesion(email, contrasenia);
     }
     public static void salirApp(){
         System.out.println("");
