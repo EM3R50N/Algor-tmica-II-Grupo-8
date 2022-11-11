@@ -4,8 +4,6 @@ import entities.Pasajero;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import persistencia.JSONConfig;
 import persistencia.Persitencia;
 import processes.registroConfig;

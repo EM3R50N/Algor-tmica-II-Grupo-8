@@ -1,5 +1,5 @@
 package processes;
-import entities.Cuenta;
+
 import org.json.simple.JSONArray;
 import entities.Chofer;
 import entities.Pasajero;
@@ -12,6 +12,7 @@ public class registroConfig {
     private ArrayList<Chofer> choferes;
     private ArrayList<Pasajero> pasajeros;
 
+
     public ArrayList<Chofer> getChoferes() {
         return choferes;
     }
@@ -19,7 +20,6 @@ public class registroConfig {
     public ArrayList<Pasajero> getPasajeros() {
         return pasajeros;
     }
-
     public registroConfig(){
         this.choferes = new ArrayList<Chofer>();
         this.pasajeros = new ArrayList<Pasajero>();
@@ -47,6 +47,7 @@ public class registroConfig {
         this.pasajeros.add((Pasajero) pasajero);
         return 0;
     }
+
     public void buscarChofer(){
         Enumeration<Chofer> cf = Collections.enumeration(choferes);
         while(cf.hasMoreElements()) {
@@ -98,6 +99,7 @@ public class registroConfig {
         }
         return arregloPasajero;
     }
+
     public void iniciarSesion(String email, String contrasenia){
 
         //ArrayList<Chofer> cf = new ArrayList<Chofer>();
